@@ -46,7 +46,7 @@ print("Is newer:", e2 > e1)
 
 #2
 """
-Create Money class that operates with money and return the result of arithmetical operations as another object 
+Create Money class that operates with money, returns the result of arithmetical operations with self.amount and other.amount as another object 
 """
 class Money:
     def __init__(self, amount):
@@ -70,4 +70,5 @@ money1 = Money(100)
 money2 = Money(50)
 print(money1 + money2)
 print(money1 - money2)
+
 print(money2 - money1)
