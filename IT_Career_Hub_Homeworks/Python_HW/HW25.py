@@ -1,23 +1,20 @@
 """
-1. Сумма цифр числа
+1. Sum of digits of a number
 
-Напишите рекурсивную функцию, которая находит сумму всех цифр числа.
+Write a recursive function to sum all digits of a number
 
-Данные:
+Data:
 
 num = 43197
 
-Пример вывода:
+Example Output:
 
 24
 """
 
 num = 15
 
-def sum_of_nums(n,acc = 0):
-    """
-    find total of nums
-    """
+def sum_of_digs(n,acc = 0):
     n = str(n)
     if not n:
         return acc
@@ -41,24 +38,21 @@ print(sum_of_nums_non_tail(num))
 
 
 """
-2. Сумма вложенных чисел
+2. Sum of nested numbers
 
-Напишите рекурсивную функцию, которая суммирует все числа во вложенных списках.
+Write a recursive function that sums all the numbers in nested lists.
 
-Данные:
+Data:
 
 nested_numbers = [1, [2, 3], [4, [5, 6]], 7]
 
-Пример вывода:
+Example output:
 
 28"""
 
 nested_numbers = [1, [2, 3], [4, [5, 6]], 7]
 
 def calculator(data : list, calc = 0) -> int:
-    """
-    sum all numbers in nested_numbers
-    """
     if not data:
         return calc
     if isinstance(data[0],list):
@@ -78,3 +72,4 @@ def sum_digits_non_tail(lst):
 
 
 print(sum_digits_non_tail(nested_numbers))
+
