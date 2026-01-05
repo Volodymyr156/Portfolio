@@ -1,13 +1,13 @@
-""" 01 Выбор заказов
+""" 01 
 
-У вас есть список заказов.
-Каждый заказ содержит название продукта и его цену.
-Напишите функцию, которая:
-- Отбирает заказы дороже 500.
-- Создаёт список названий отобранных продуктов в алфавитном порядке.
-- Возвращает итоговый список названий.
+You have a list of orders.
+Each order contains a product name and price.
+Write a function that:
+- Selects orders over 500.
+- Creates a list of the names of the selected products in alphabetical order.
+- Returns the final list of names.
 
-Данные:
+The data:
 orders = [
     {"product": "Laptop", "price": 1200},
     {"product": "Mouse", "price": 50},
@@ -17,7 +17,7 @@ orders = [
     {"product": "Desk", "price": 400}
 ]
 
-Пример вывода:
+Example of an output:
 ['Chair', 'Laptop']
 
 """
@@ -45,16 +45,16 @@ result = select_expensive_orders(orders)
 print(result)
 print(result == sample)
 
-""" 02 Статистика продаж
+""" 02 Sales Statistics
 
-Дан двумерный массив продаж (список тюплов): (товар, количество, цена).
+Given a two-dimensional array of sales (a list of tuples): (product, quantity, price).
 
-Напишите программу, которая:
-- Вычисляет общую выручку для каждого товара.
-- Возвращает словарь с товарами {товар: выручка},
-    отсортированный по убыванию выручки.
-
-Данные:
+Write a program that:
+-Calculates the total revenue for each product.
+-Returns a dictionary of products {product: revenue},
+ sorted by descending revenue.
+ 
+The data:
 sales = [
     ("Laptop", 5, 1200),
     ("Mouse", 50, 20),
@@ -63,7 +63,7 @@ sales = [
     ("Chair", 20, 800)
 ]
 
-Пример вывода:
+An output example:
 {'Chair': 16000, 'Laptop': 6000, 'Monitor': 3000, 'Keyboard': 1500, 'Mouse': 1000}
 
 """
@@ -88,4 +88,5 @@ def calculate_sales(sales):
 
 result = calculate_sales(sales)
 print(result)
+
 print(str(result) == str(sample))
