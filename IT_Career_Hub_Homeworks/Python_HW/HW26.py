@@ -1,30 +1,37 @@
-# #1
+#1
 import os
 import sys
-# usrargs = sys.argv
-#
-# if len(usrargs) != 2:
-#     print("Usage: python HW26.py <dir>")
-#     sys.exit(1)
-#
-# path = usrargs[1]
-# if not os.path.isdir(path):
-#     print(f"Error: {path} is not a directory")
-#     sys.exit(1)
-#
-# print(f"Elements of directory: {path}")
-#
-# print("List of files:")
-# for el in os.listdir(path):
-#     if os.path.isfile(os.path.join(path, el)):
-#         print(f"file - {el}")
-#
-# print("List of directories:")
-# for d in os.listdir(path):
-#     if os.path.isdir(os.path.join(path,d)):
-#         print(f"dir - {d}")
+"""
+Write a short script for the terminal that takes a path of a directory and shows all files and directories. 
+"""
+
+ usrargs = sys.argv
+
+ if len(usrargs) != 2:
+     print("Usage: python HW26.py <dir>")
+     sys.exit(1)
+
+ path = usrargs[1]
+ if not os.path.isdir(path):
+    print(f"Error: {path} is not a directory")
+    sys.exit(1)
+
+print(f"Elements of directory: {path}")
+
+print("List of files:")
+for el in os.listdir(path):
+    if os.path.isfile(os.path.join(path, el)):
+        print(f"file - {el}")
+
+print("List of directories:")
+for d in os.listdir(path):
+    if os.path.isdir(os.path.join(path,d)):
+        print(f"dir - {d}")
 
 #2
+"""
+Write a short script for the terminal that takes a path of a directory and an extension, then looks for the files(victims) with previously chosen extension and deletes(executes;D) them
+"""
 newargs = sys.argv
 usr_path = newargs[1]
 ext = newargs[2]
@@ -50,7 +57,7 @@ verdict = input("Victims found. Awaiting for execution... (y/n): ")
 
 while True:
     if verdict == "y":
-        print(f"Chainsaw turned on...")
+        print(f"The chainsaw started...")
         for v in list_of_files:
             os.remove(v)
         print("Successfully removed all files")
@@ -60,5 +67,6 @@ while True:
         break
     else:
         verdict = input("Incorrect answer (y/n): ")
+
 
 
