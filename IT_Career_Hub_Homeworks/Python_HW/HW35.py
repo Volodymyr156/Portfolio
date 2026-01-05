@@ -1,5 +1,5 @@
 
-# Две задачки в одном решении!!!
+"""Create a class User that contains username, password, counts users and checks whether password and/or password are valid"""
 
 class User:
     total_users = 0
@@ -35,19 +35,19 @@ except ValueError as e:
     print("Error:", e)
 
 try:
-    user2 = User("", "12345")  # Некорректное имя
+    user2 = User("", "12345")  # Incorrect name
 except ValueError as e:
     print("Error:", e)
 try:
-    user3 = User("bob", "123")  # Слишком короткий пароль
+    user3 = User("bob", "123")  # Too short password
 except ValueError as e:
     print("Error:", e)
 
 print(f"Total users: {User.get_total()}")
-# Должно быть 1, только валидные пользователи считаются
 
 
 # User(username='alice')
 # Error: Username must be a non-empty string.
 # Error: Password must be a string with at least 5 characters.
 # Total users: 1
+
