@@ -1,8 +1,10 @@
-#1 и 2 задачки в одном решении!
+
 import time
 
-
-input_repeats = int(input("Введите желаемое количество повторений для теста функции: "))
+"""
+Measure time of an execution of the function, and then output an average execution time
+"""
+input_repeats = int(input("Enter the desired number of repetitions to test the function: "))
 def measure_time(func,repeats=input_repeats):
     def wrapper():
         list_time = []
@@ -11,10 +13,10 @@ def measure_time(func,repeats=input_repeats):
             start = time.time()
             func()
             c += 1
-            print("Функция выполнилась "+ str(c) +"-й раз!")
+            print("The function was executed "+ str(c) +" times(time)!")
             end = time.time()
             list_time.append(end - start)
-        print (f"Среднее время выполнения для {input_repeats} вызовов(вызова): {round(sum(list_time) / len(list_time), 2)}")
+        print (f"Average execution time for {input_repeats} calls(call): {round(sum(list_time) / len(list_time), 2)}")
     return wrapper
 
 
@@ -29,4 +31,5 @@ def compute():
 
 
 compute()
+
 
